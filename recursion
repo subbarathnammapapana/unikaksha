@@ -1,0 +1,50 @@
+#Binary equivalent of a number using recursion
+a=int(input())
+print(bin(a)[2:])
+
+#Fibonacci Series
+n_terms = int(input())  
+n_1 = 0  
+n_2 = 1  
+count = 0  
+if n_terms <= 0:  
+    print ("Please enter a positive integer, the given number is not valid")  
+elif n_terms == 1:  
+    print ("The Fibonacci sequence of the numbers up to", n_terms, ": ")  
+    print(n_1)  
+else:  
+    while count < n_terms:  
+        print(n_1)  
+        nth = n_1 + n_2  
+        n_1 = n_2  
+        n_2 = nth  
+        count += 1  
+        
+#Odd or Even
+n=int(input())
+if n%2==0:
+    print("even!")
+else:
+    print("odd!")
+     
+ #Factorial
+ a=int(input())
+factorial=1
+if a<0:
+    print("factorial does not exist for negative numbers")
+elif a==0:
+    print("factorial exist 1")
+else:
+    for i in range(1,a+1):
+        factorial=factorial*i
+    print(factorial)
+    
+ #LCM of two numbers
+ a=int(input())
+b=int(input())
+c=a*b
+print(c)
+
+#Decimal to Binary
+a=int(input())
+print(bin(a)[2:])
