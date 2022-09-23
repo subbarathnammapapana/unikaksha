@@ -1,0 +1,164 @@
+#Amoeba Multiplication
+print("Enter the number of Months:")
+n=int(input())
+A=-1
+B=1
+for i in range(1,n+1):
+    C=A+B
+    A=B
+    B=C
+print("The amoeba size is",C)
+
+#Factorial
+n=int(input())
+i=1                
+while(True):   
+   if(n%i==0):
+     n=n//i
+   else:
+    break
+   i=i+1 
+if(n==1):
+  print("Yes")
+else:
+  print("No")
+  
+  #Sum of Digits
+  n=int(input())
+x=0
+while n!=0:
+    y=n%10
+    x=x+y
+    n=n//10
+print(x)
+
+#Friendly Pair
+x=int(input())
+y=int(input())
+sum1=0
+sum2=0
+for i in range(1,x+1):
+    if x%i==0:
+        sum1=sum1+i
+for j in range(1,y+1):
+    if y%j==0:
+        sum2=sum2+j
+if (sum1//x)==(sum2//y):
+    print("Friendly pair")
+else:
+    print("Not friendly pair")
+    
+  #Harshard Number
+  n=int(input())
+sum=0
+temp=n
+while n!=0:
+    sum=sum+(n%10)
+    n=n//10
+if(temp%sum==0):
+    print("Harshad Number")
+else:
+    print("Not Harshad Number")
+    
+ #LCM of two numbers
+ a=int(input())
+b=int(input())
+if a<b:
+    small=a
+else:
+    small=b
+for i in range(small,0,-1):
+    if a%i==0 and b%i==0:
+        break
+    print(i)
+lcm=(a*b)//i
+print("LCM of",a,"and",b,"is",lcm)
+
+#Palindrome of a number
+n=int(input())
+rev=0
+temp=n
+while n!=0:
+   rem=n%10
+   rev=rev*10+rem
+   n=n//10
+if temp==rev:
+    print("Palindrome")
+else:
+    print("Not a Palindrome")
+    
+#Perfect Number
+n=int(input())
+sum=0
+for i in range(1,n):
+    if(n%i==0):
+     sum=sum+i
+if(sum==n):
+    print("Perfect Number")
+else:
+    print("Not a Perfect Number")
+    
+#Prime Number
+n=int(input())
+count=0
+for i in range(1,n+1):
+    if n%i==0:
+        count=count+1
+if count==2:
+    print("prime Number")
+else:
+    print("Not a prime")
+
+#Prime Numbers in a Range
+x=ixnt(input())
+y=int(input())
+for j in range(x,y+1):
+    count=0
+    for i in range(2,(j//2)+1):
+        if j%i==0:
+            count=count+1
+    if count==0 and j!=1:
+        print(j)
+        
+#Reverse a Number
+n=int(input())
+rev=0
+while n!=0:
+    rem=n%10
+    rev=rev*10+rem
+    n=n//10
+print(rev)
+
+#Strong Number
+n=int(input())
+sum=0
+temp=n
+while(n):
+    i=1
+    fact=1
+    rem=n%10
+    while(i<=rem):
+       fact=fact*i
+       i=i+1
+    sum=sum+fact
+    n=n//10
+if(sum==temp):
+    print("Strong Number")
+else:
+    print("Not a Strong Number")
+
+#Sum of natural Numbers
+n=int(input())
+sum=0
+while(n>0):
+    sum=sum+n
+    n=n-1
+print(sum)
+
+#Sum of Numbers in a range
+n=int(input())
+a=int(input())
+sum=0
+for i in range(n,a+1):
+    sum=sum+i
+print(sum)
